@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<head>	
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="revisit-after" content="1 days" />
+	<meta name="googlebot" content="index,follow" />
+	<meta name="robots" content="index,follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Easily download Pinterest videos with our free tool. Fast, simple, and mobile-friendly downloader.">
-    <meta name="keywords" content="Pinterest video downloader, free video download, online downloader, save Pinterest videos, download Pinterest videos">
-    <meta name="author" content="Your Site Name">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pinterest Video Downloader - Free & Easy</title>
+	<meta name="distribution" content="global">
+	<meta name="description" content="Easily download Pinterest videos with our free tool. Fast, simple, and mobile-friendly downloader.">
+	<meta name="keywords" content="Pinterest video downloader, free video download, online downloader, save Pinterest videos, download Pinterest videos">
+	<meta name="author" content="pinterstvideodownloader.pages.dev">	
+	<link rel="canonical" href="https://pinterstvideodownloader.pages.dev/" />
+    
+	<meta property="og:title" content="Pinterest Video Downloader - Free & Easy" />
+    <meta property="og:description" content="Easily download Pinterest videos with our free tool. Fast, simple, and mobile-friendly downloader." />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://pinterstvideodownloader.pages.dev/" />
+    <meta property="og:type" content="website" />
+	<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEQD/APDw9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREREREREBERERERERERERERIREREREREREiERERERERESIhERERERERIiIREREREREiIhERERERESIhERERERERIhEREREREREhEREREREREREREREREREREREREREREREREREREQEREREREREQAAAAAAAAAAD//wAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAAD//wAA" rel="icon" type="image/x-icon" />
+	
+	
+    
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
+			
         }
         header {
             background-color: crimson;
             padding: 10px;
             text-align: right;
+			
         }
+		
         nav a {
             color: white;
             text-decoration: none;
@@ -48,7 +68,7 @@
             border-radius: 5px;
             font-size: 18px;
         }
-        button {
+        .downloadButton {
             background-color: crimson;
             color: white;
             padding: 15px 30px;
@@ -56,10 +76,25 @@
             border-radius: 5px;
             font-size: 18px;
             cursor: pointer;
+			text-decoration: none;
         }
-        button:hover {
+        .downloadButton:hover {
             background-color: darkred;
         }
+		
+		/* Container for the video to make it responsive */
+        .videoContainer {
+            max-width: 720px;  /* Set maximum width to 720px */
+            width: 100%;       /* Make it responsive by setting width to 100% */
+            margin: 0 auto;    /* Center the video player */
+        }
+
+        video {
+            width: 100%;       /* The video takes full width of its container */
+            height: auto;      /* Maintain the aspect ratio */
+			border-radius: 5px;
+        }
+		
         article {
             text-align: left;
             margin: 40px 0;
@@ -72,18 +107,25 @@
         }
         @media (max-width: 768px) {
             input[type="text"] {
-                width: 100%;
+                width: 90%;
             }
+			.downloadButton {
+			  margin-top: 10px;
+			}
         }
+		
+		
+
+
     </style>
 </head>
 <body>
 
 <header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="contact-us.html">Contact</a>
     </nav>
 </header>
 
@@ -91,21 +133,181 @@
     <h1>Pinterest Video Downloader - Free & Easy</h1>
     
     <div class="input-container">
-        <input type="text" placeholder="Paste Pinterest video link here..." aria-label="Pinterest video URL">
-        <button>Download</button>
+        <input id="pinterestUrl" type="text" placeholder="Paste Pinterest video link here..." aria-label="Pinterest video URL">
+        <button id="downloadButton" class="downloadButton" >Download</button>
+        
+    </div>
+	
+	<div id="videoContainer" style="display: none;">
+        <video id="videoPlayer" controls></video>
+        <br><br>
+        <a id="downloadLinkButton" href="#" target="_blank" class="downloadButton" download >Download Video</a>
     </div>
 
     <article>
-        <h2>How to Download Pinterest Videos for Free</h2>
-        <p>Looking for an easy way to download Pinterest videos? You're in the right place! Simply paste the video link in the box above, hit download, and get your video in seconds. Fast, simple, and free! Scroll down to read more tips, FAQs, and why using our tool is super safe.</p>
-        
+        <h2>How to Download Pinterest Videos for Free (No Tech Skills Needed) 🎥</h2>
+        <p>Simply paste the video link in the box above, hit download, and get your video in seconds. Fast, simple, and free! Scroll down to read more tips, FAQs, and why using our tool is super safe.</p>
+		
+		<p><strong>No App Downloads Required:</strong><br>You don’t need to install any additional app or APK to use this Pinterest video downloader. Everything happens right in your browser, so you save space and avoid annoying app updates! 🚫📱</p>
+		
+		<h2>Why Pinterest is important?</h2>
+		<p>Pinterest is a treasure chest full of ideas! Whether it's DIY crafts, fashion, food recipes, or cool workout videos, we’ve all been there—seeing something and thinking, "Wow! I want to save this." But then, you realize, Pinterest doesn't let you download videos directly. Well, worry not, my friend, because with this <em>Pinterest Video Downloader</em> tool, you're all set to grab those cool videos in just a few clicks! 🎯</p>
+		
+		<h2>Why Use a Pinterest Video Downloader?</h2>
+		<p>Imagine this: You’re scrolling through Pinterest, and boom—you see the perfect recipe video. But what happens if the video disappears? 😱 Or if your data runs out? Well, that’s where our Pinterest video downloader saves the day! You can save videos on your phone or laptop and watch them offline, anytime!</p>
+
+       
+	   
+	   <h3>How to Download Pinterest Videos (Step-by-Step)</h3>
+	   <p>No need to be a tech wizard, pinky promise! Here’s how to use the tool like a pro:</p>
+	   
+	   <ol>
+	     <li>
+		   <p><strong>Copy the Video Link</strong><br>👉 First, open Pinterest and find the video you want. Tap on the video to open it, and then click on the “Share” button (you know, the one with the arrow!). A few options will pop up—just copy the video link! 📋</p></li>
+		
+		<li><p><strong>Paste the Link in the Downloader</strong><br>🌟 Now, open our <em>Pinterest Video Downloader</em>. You'll see a big box that says "Paste your link here." Yep, that's where the magic happens! Go ahead and paste the link into that box. 🎯</p></li>
+		
+		<li><p><strong>Hit the Download Button</strong><br>🎉 Click the download button, and voila! Just wait for a few seconds (or maybe dance while waiting, your choice!). The downloader will fetch your video. 🚀</p></li>
+		
+		<li><p><strong>Download Your Video</strong><br>💾 Once the video is ready, you’ll see a download link. Click it, and the video will save to your device. Easy peasy, right?</p></li>
+		
+	  </ol>
+	   
+	   <br/>
+	   
+	   <h3>Pro Tips to Save Time and Data 🧐</h3>
+	   <ul>
+	     <li>
+		   <strong>Wi-Fi is your friend</strong>: If you’re downloading lots of videos, save your data and use Wi-Fi!
+		 </li>
+		 <li>
+		   <strong>Storage alert</strong>: Check your device storage before downloading, or you might end up with a "storage full" nightmare. 😅
+		 </li>
+	   </ul>
+	   
+	   <br/>
+	   
+	   <h3>Is It Safe to Use This Tool?</h3>
+	   <p>Absolutely! 😎 It’s 100% safe, no viruses, no sneaky ads. Just straightforward downloading. But remember, the videos you download should be for personal use only. No sharing or re-uploading, okay?</p>
+	   
+	   <h3>Common Questions (FAQs) 💡</h3><p><strong>Q: Can I download GIFs from Pinterest?</strong><br>A: Oh, you bet! This downloader works for GIFs too. 🎉</p>
+	   
+	   <p><strong>Q: Does it work on mobile?</strong><br>A: Yep! Works on phones, tablets, and computers like a charm. 🏆</p><hr>
+	   
+	   <p>Now, go ahead and give it a try! 🎬</p>
         <!-- Insert the rest of your article content here -->
     </article>
 </div>
 
 <footer>
-    <p>&copy; 2024 Your Site Name. All rights reserved.</p>
+    <p>&copy; 2025 Pinterst Video Downloader. <a href="privacy-policy.html">Privacy Policy</a></p>
 </footer>
 
+
+<script>
+        document.getElementById('downloadButton').addEventListener('click', async function(e) {
+            e.preventDefault();
+
+            // Get the Pinterest URL from the input field
+            const pinterestUrl = document.getElementById('pinterestUrl').value;
+			
+			if (!isValidPinterestUrl(pinterestUrl)) {
+			  console.log("inValid Pinterest URL: " + pinterestUrl);
+			  alert("inValid Pinterest URL");
+			  return;
+			}
+            
+			//loading animation
+			startDownload();
+			
+            // Use a CORS proxy to fetch the HTML of the Pinterest URL
+            const proxyUrl = 'https://fetch-proxy.boysofts.workers.dev/?url='; // You may need to use your own proxy service
+            const fetchUrl = proxyUrl + pinterestUrl;
+
+            try {
+                // Fetch the HTML content of the Pinterest URL
+                const response = await fetch(fetchUrl);
+                const responseJson = await response.json();
+                
+				var html = responseJson['data'].replace(/^"(.*)"$/, "$1");
+                
+				const extractedUrls = extractVideoUrl(html);
+
+                //takign the first url
+                const videoUrl = extractedUrls[0];
+
+                if (videoUrl) {
+                    // Display the video player and the download button
+                    document.getElementById('videoPlayer').src = videoUrl;
+                    document.getElementById('downloadLinkButton').href = videoUrl;
+
+                    document.getElementById('videoContainer').style.display = 'block';
+					
+					//Completed signal
+					completeDownload();
+                } else {
+                    alert('Video not found!');
+                }
+            } catch (error) {
+                console.error('Error fetching the Pinterest video:', error);
+                alert('Failed to retrieve the video. Please try again.');
+            }
+        });
+		
+/*
+https://www.pinterest.com/pin/63754150964804049/
+https://in.pinterest.com/pin/63754150964804049/
+https://pinterest.com/pin/63754150964804049/
+*/
+function isValidPinterestUrl(url) {
+  // Regular expression to check if it's a valid Pinterest URL with www, country code, or no subdomain
+  const regex = /^https?:\/\/((www\.)?|([a-z]{2}\.)?)pinterest\.com\/pin\/\d+\/?$/;
+  
+  // Test the URL against the regex
+  return regex.test(url);
+}
+
+
+function extractVideoUrl(text) {
+  // Regex to match URLs from 'videos/' to '.mp4', excluding those ending with '_t' followed by digits
+  const regex = /https:\/\/\w+\.pinimg\.com\/videos\/[^\/]+(?:\/[^\/]+)*[^\/]+(?<!_t\d)\.mp4/g;
+
+  // Use the regex to find the matching URLs in the text
+  const matches = text.match(regex);
+  
+  // Return the matched URLs or null if no match
+  return matches ? matches : null;
+}
+
+//loading indicator
+	let downloadInterval;
+	
+	function startDownload() {
+		const button = document.getElementById('downloadButton');
+		button.disabled = true; // Disable the button
+		let dots = 0;
+
+		// Change button text to "Downloading"
+		button.textContent = 'Downloading';
+
+		// Start the ellipsis animation
+		downloadInterval = setInterval(() => {
+			dots = (dots + 1) % 4; // Cycle between 0, 1, 2, 3 (for 0 to 3 dots)
+			button.textContent = 'Downloading' + '.'.repeat(dots);
+		}, 500); // Change every 500ms
+
+	}
+	
+	function completeDownload() {
+	   clearInterval(downloadInterval); // Stop the animation
+	   const button = document.getElementById('downloadButton');
+	   button.textContent = 'Download Completed'; // Final button text
+	   button.disabled = false; // Re-enable the button
+	   
+	   setTimeout(() => {                
+                button.textContent = 'Download'; // Download Again                
+            }, 5000); // Simulate 5-second process
+	}
+    </script>
 </body>
 </html>
